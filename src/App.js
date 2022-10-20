@@ -29,9 +29,13 @@ const App = () => {
       location: "Canberra",
     },
   ];
+
+  const myDataHandler = (expense) => {
+    console.log(expense)
+  }
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onSaveFinalData={myDataHandler}/>
       <Expenses items={expenseArray} />
    </div>
   );
