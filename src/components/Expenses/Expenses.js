@@ -4,9 +4,16 @@ import './Expenses.css'
 
 import Card from '../UI/Card'
 
+import ExpenseFilter from './ExpenseFilter'
+
 const Expenses = (expenseArray) => {
+  const FilterHandler = (props) => {
+    console.log(props)
+  }
   return (
-    <Card className="expenses">
+    <div>
+     <Card className="expenses">
+      <ExpenseFilter onFilterChange = {FilterHandler}/>
       <ExpenseItem
         title={expenseArray.items[0].title}
         amount={expenseArray.items[0].amount}
@@ -32,6 +39,7 @@ const Expenses = (expenseArray) => {
         location={expenseArray.items[3].location}
       />
     </Card>
+    </div>
   );
 }
 
