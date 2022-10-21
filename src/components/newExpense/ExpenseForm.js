@@ -26,6 +26,7 @@ const ExpenseForm = (props) => {
         title: EnteredTitle,
         amount: EnteredAmount,
         date: new Date(EnteredDate),
+        id:Math.random().toString()
       };
       props.onSaveExpenseData(data)
       // console.log(data);
