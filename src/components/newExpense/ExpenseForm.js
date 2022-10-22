@@ -24,7 +24,7 @@ const ExpenseForm = (props) => {
       event.preventDefault();
       const data = {
         title: EnteredTitle,
-        amount: EnteredAmount,
+        amount: +EnteredAmount,
         date: new Date(EnteredDate),
         id:Math.random().toString()
       };
